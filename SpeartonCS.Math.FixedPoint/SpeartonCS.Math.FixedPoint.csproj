@@ -12,6 +12,19 @@
     <Description>Fixed-Point GENERIC math for .NET 10 and higher</Description>
     <PackageTags>net;dotnet;10;net10;dotnet10;.net;.net10;10.0;math;fixed;point;number;integer</PackageTags>
     <IsAotCompatible>True</IsAotCompatible>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Spearton-CS/SpeartonCS.Math.FixedPoint</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Spearton-CS/SpeartonCS.Math.FixedPoint</PackageProjectUrl>
+
+	<VersionPrefix>0.1.0</VersionPrefix>
+	<VersionSuffix>beta.1</VersionSuffix>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

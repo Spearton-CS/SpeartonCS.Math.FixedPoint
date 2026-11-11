@@ -44,4 +44,30 @@ internal class Program
 
         Console.ReadKey();
     }
+
+    static void CheckStr(string name, Func<string> actual, string expected)
+    {
+        try
+        {
+            string got = actual();
+            Console.WriteLine($"{(got == expected ? "OK  " : "FAIL")} {name}: expected \"{expected}\", got \"{got}\"");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"FAIL {name}: exception {ex.GetType().Name}: {ex.Message}");
+        }
+    }
+
+    static void CheckRaw<T>(string name, Func<T> actual, T expected) where T : IEquatable<T>
+    {
+        try
+        {
+            T got = actual();
+            Console.WriteLine($"{(got.Equals(expected) ? "OK  " : "FAIL")} {name}: expected {expected}, got {got}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"FAIL {name}: exception {ex.GetType().Name}: {ex.Message}");
+        }
+    }
 }
