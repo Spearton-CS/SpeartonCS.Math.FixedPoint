@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>SpeartonCS.Math.FixedPoint</Title>
+    <Authors>SpeartonCS</Authors>
+    <Description>Fixed-Point GENERIC math for .NET 10 and higher</Description>
+    <PackageTags>net;dotnet;10;net10;dotnet10;.net;.net10;10.0;math;fixed;point;number;integer</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsAotCompatible>True</IsAotCompatible>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsAotCompatible>True</IsAotCompatible>
+  </PropertyGroup>
+
+</Project>
