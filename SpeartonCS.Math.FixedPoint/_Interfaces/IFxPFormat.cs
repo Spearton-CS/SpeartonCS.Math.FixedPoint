@@ -16,6 +16,7 @@ public interface IFxPFormat<TUnderlying>
     /// Bits after fixed point
     /// </summary>
     public abstract static int FBits { get; }
+    public abstract static TUnderlying MaxFPartDecimalDenominator { get; }
     /// <summary>
     /// Indicator of sign in I-part
     /// </summary>

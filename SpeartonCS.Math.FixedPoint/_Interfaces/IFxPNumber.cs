@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace NSpeartonCS.Math.FixedPoint;
+namespace SpeartonCS.Math.FixedPoint;
 
 /// <summary>
 /// Generic Fixed-Point number over <typeparamref name="TUnderlying"/>
@@ -30,6 +30,27 @@ public interface IFxPNumber<TSelf, TUnderlying>
     public abstract static TSelf BitCast(TUnderlying raw);
     public abstract static TUnderlying BitCast(TSelf fp);
 
+    /// <summary>
+    /// The REAL (decimal) <typeparamref name="TUnderlying"/> as <see cref="IPart"/>
+    /// </summary>
     public TUnderlying IPart { get; set; }
+    /// <summary>
+    /// The REAL (binary) <typeparamref name="TUnderlying"/> as <see cref="FPart"/>
+    /// </summary>
     public TUnderlying FPart { get; set; }
+    /// <summary>
+    /// Sets <see cref="FPart"/> as decimal <typeparamref name="TUnderlying"/>
+    /// </summary>
+    /// <param name="dec">Decimal value</param>
+    /// <param name="denominator">1, 10, 100 and etc.</param>
+    /// <returns>REAL (binary) value</returns>
+    public TUnderlying SetFPartDecimal(TUnderlying dec, TUnderlying denominator);
+    /// <summary>
+    /// Gets <see cref="FPart"/> as decimal <typeparamref name="TUnderlying"/>
+    /// </summary>
+    /// <param name="denominator">1, 10, 100 and etc.</param>
+    /// <returns>Decimal value</returns>
+    public TUnderlying GetFPartDecimal(TUnderlying denominator);
+    public TUnderlying GetFPartDecimalDenominator();
+    public TUnderlying GetFPartDecimalDenominator(out TUnderlying decimalValue);
 }

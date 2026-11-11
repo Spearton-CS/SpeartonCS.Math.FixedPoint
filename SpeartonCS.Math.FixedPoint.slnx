@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="LiveTester/LiveTester.csproj" Id="eb961a91-26e1-49b6-99c6-f113dde8e8be" />
   <Project Path="SpeartonCS.Math.FixedPoint/SpeartonCS.Math.FixedPoint.csproj" />
 </Solution>
