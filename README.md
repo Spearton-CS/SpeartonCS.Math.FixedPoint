@@ -1,4 +1,4 @@
-# SpeartonCS.Math.FixedPoint
+# SpeartonCS.Math.FixedPoint [![NuGet](https://img.shields.io/nuget/v/SpeartonCS.Math.FixedPoint.svg)](https://nuget.org/packages/SpeartonCS.Math.FixedPoint)
 
 Fixed-point **generic math** for .NET 10 and higher.
 
